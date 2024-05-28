@@ -38,6 +38,7 @@ function crear_Card(Hamburguesa, contenedor) {
 
     const precio = document.createElement("p");
     precio.innerText = `$${Hamburguesa.precio}`;
+    precio.className= "precio";
 
     const imagen = document.createElement("img");
     imagen.className = "img";
@@ -53,8 +54,8 @@ function crear_Card(Hamburguesa, contenedor) {
     boton.onclick = () => agregar_Carrito(Hamburguesa);
 
     card.appendChild(titulo);
-    card.appendChild(precio);
     card.appendChild(imagen);
+    card.appendChild(precio);
     card.appendChild(texto);
     card.appendChild(boton);
 
