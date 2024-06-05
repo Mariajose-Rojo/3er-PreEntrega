@@ -8,6 +8,8 @@ container.className = "c_container";
 const verCarrito = document.getElementById("ver_carrito");
 const carrito_contenedor = document.getElementById("carrito_contenedor");
 
+const cantCarrito = document.getElementById ("cantidadCarrito"); //contador items del carrito
+
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 // let carrito=[];
@@ -18,14 +20,16 @@ function agregar_Carrito(hamburguesa) {
     let productoEnCarrito = carrito.find(el => el.id === agregar_burguer.id);
 
     if (productoEnCarrito) {
-        productoEnCarrito.cantidad += 1;
+        productoEnCarrito.cantidad += 1; //si es el mismo producto aumenta la cant
     } else {
         agregar_burguer.cantidad = 1;
         carrito.push(agregar_burguer);
     }
 
+    // carrito[productoEnCarrito]= {...hamburguesa};
     console.log(carrito);
-    localStorage.setItem("carrito", JSON.stringify(carrito));
+    localStorage.setItem("carrito", JSON.stringify(carrito)); //saveLocal();
+    cart_counter();
 }
 
 function crear_Card(Hamburguesa, contenedor) {
@@ -67,41 +71,11 @@ function crear_Card(Hamburguesa, contenedor) {
 
 productos.forEach(el => crear_Card(el, container)); //creo todas las cards por producto
 
-verCarrito.addEventListener("click", () => {
-    carrito_contenedor.innerHTML = ''; // Limpio el contenido previo del carrito
+const saveLocal= () =>{
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+};
 
-    const carrito_header = document.createElement("div");
-    carrito_header.className = "carr_header";
-    carrito_header.innerHTML = `
-        <h1 class="carr_title">Carrito</h1>
-    `;
-    carrito_contenedor.appendChild(carrito_header);
 
-    const btn_cierre = document.createElement("button");
-    btn_cierre.className = "btn_x";
-    btn_cierre.innerText = "X";
-    btn_cierre.addEventListener("click", () => {
-        carrito_contenedor.style.display = "none"; // Oculto el carrito cuando hago clic en el botón de cierre
-    });
-    carrito_contenedor.appendChild(btn_cierre);
 
-    carrito.forEach((producto) => {
-        let carrito_content = document.createElement("div");
-        carrito_content.className = "contenido_carr";
-        carrito_content.innerHTML = `
-            <h4>${producto.nombre}</h4>
-            <p>Precio: ${producto.precio} $</p>
-            <p>Cantidad: ${producto.cantidad}</p>
-        `;
-        carrito_contenedor.append(carrito_content);
-    });
 
-    const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
-    const total_compra = document.createElement("div");
-    total_compra.innerText = `Total a pagar: ${total} $`;
-    total_compra.className = "tot_compra";
-    carrito_contenedor.append(total_compra);
-
-    carrito_contenedor.style.display = "block"; // Muestro el carrito
-});
 
