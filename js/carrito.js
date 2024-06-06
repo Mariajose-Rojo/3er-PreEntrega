@@ -19,7 +19,7 @@ const Armar_carrito = () => {
     btn_cierre.addEventListener("click", () => {
         carrito_contenedor.style.display = "none"; // Oculto el carrito cuando hago clic en el botón de cierre
     });
-    carrito_contenedor.appendChild(btn_cierre);//adjunto el btn de cierre al div del carrito
+    carrito_header.appendChild(btn_cierre);//adjunto el btn de cierre al header del carrito
     
     //recorro el carrito y creo el contenido que muestra
     carrito.forEach((producto) => {
@@ -42,6 +42,7 @@ const Armar_carrito = () => {
         let sumar = carrito_content.querySelector(".sumar");
         sumar.addEventListener("click", () =>{
             producto.cantidad ++;
+            alertaToasty(); //le agrego la alerta de agregar producto
             saveLocal();
             Armar_carrito();
         })
@@ -56,8 +57,34 @@ const Armar_carrito = () => {
         })
 
         let eliminar= carrito_content.querySelector(".delete_item");
+        //le agrego el sweet alert al boton de eliminar junto con la funcion 
         eliminar.addEventListener("click", ()=>{
-            eliminar_item(producto.id); //le paso la funcion de eliminar
+            Swal.fire({
+                title: `Estas seguro de eliminar ${producto.nombre}?`,
+                text: "Se eliminan todas sus unidades",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Si, borralo!"
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Swal.fire({
+                    title: "Eliminado!",
+                    // text: "Sacaste todos.",
+                    icon: "success"
+                  });
+
+                  eliminar_item(producto.id); //le paso la funcion de eliminar
+                }else { 
+                    Swal.fire({
+                        title: "No eliminado!",
+                        text: "El producto sigue en tu carrito.",
+                        icon: "error"
+                      });
+                }
+              });
+            
         })
     });
     
@@ -72,7 +99,7 @@ const Armar_carrito = () => {
     
 }
 
-
+//boton para abrir o cerrar el carrito:
 verCarrito.addEventListener("click", Armar_carrito) //cuando hago click, arma y muestra el carrito
 
 const eliminar_item =(id) => {

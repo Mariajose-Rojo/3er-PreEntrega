@@ -135,28 +135,30 @@
     z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
 }
 
-.cart_header{
+.cart_header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Distribuir elementos en los extremos */
+    align-items: center; /* Alinear verticalmente */
     background-color: #171515;
     color: #fff;
     width: 100%;
+    padding: 8px; /* Añadir padding para espacio interno */
 }
 
-.cart_header .cart_title{
-    justify-self: start;
-    padding: 8px;
+.cart_title {
+    flex-grow: 1; /* Permitir que el título ocupe todo el espacio disponible */
+    text-align: center; /* Centrar el texto */
+    margin: 0;
+    padding: 0 1rem; /* Añadir padding para espaciar el texto del botón */
 }
 
-.cart_header_btn{
-    /* align-items: self-end; */
+.cart_header_btn {
     cursor: pointer;
-    background-color:brown;
+    background-color: brown;
     color: #fff;
     padding: 1rem;
-    top: 0;
-    right: 0;
-    /* position: initial; */
+    margin-left: auto; /* Empujar el botón a la derecha */
+    font-size: 1.5rem; /* Ajustar tamaño de la fuente */
 }
 
 .cart_content{

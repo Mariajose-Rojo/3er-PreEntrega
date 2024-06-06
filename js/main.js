@@ -1,6 +1,5 @@
-{/* <div id="card_container"></div>
-<div id="carrito"></div> 
-<aside id="btn_carrito"></aside>*/}
+
+
 
 // Obtengo los elementos de HTML por su ID
 
@@ -10,6 +9,22 @@ const verCarrito = document.getElementById("ver_carrito");
 const carrito_contenedor = document.getElementById("carrito_contenedor");
 
 const cantCarrito = document.getElementById("cantidadCarrito"); //contador items del carrito
+
+
+// libreria Toastify
+function alertaToasty(){
+    Toastify({
+        text: "Producto agregado con exito!",
+        duration: 1000, 
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(to right, #910c26, #ed6e4e)",
+        },
+        }).showToast();
+}
+
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let productos = []; //declaro el array de forma global
@@ -38,7 +53,6 @@ function agregar_Carrito(hamburguesa) {
         carrito.push(agregar_burguer);
     }
 
-    // carrito[productoEnCarrito]= {...hamburguesa};
     console.log(carrito);
     localStorage.setItem("carrito", JSON.stringify(carrito)); //saveLocal();
     cart_counter();
@@ -67,7 +81,10 @@ function crear_Card(Hamburguesa, contenedor) {
     const boton = document.createElement("button");
     boton.className = "boton_compra";
     boton.innerText = "Agregar";
-    boton.onclick = () => agregar_Carrito(Hamburguesa);
+    boton.onclick = () => {
+        agregar_Carrito(Hamburguesa);
+        alertaToasty();  //le agrego la notificacion de toastify
+    }
 
     card.appendChild(titulo);
     card.appendChild(imagen);
