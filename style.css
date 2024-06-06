@@ -117,28 +117,22 @@
     box-shadow:  4px 4px 4px rgba(82, 0, 0, 0.343);
 }
 
-
-/*  Segmento carrito de compra */
-/* .max_container{
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    justify-content: space-around;
-} */
-.cart_container{
+/* _________ CARRITO DE COMPRAS_________________ */
+.cart_container {
     width: 70%;
     margin: 0 10%;
     max-height: 88vh;
-
     background-color: rgb(60, 57, 57);
-    color:#fff;
-
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: fixed;
-    top: 12vh;
+    top: 5vh; /* Cambiado a 0 para que empiece desde la parte superior */
+    right: 0; 
+    overflow-y: auto; /* Permitir el desplazamiento vertical */
     scrollbar-color: none;
+    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
 }
 
 .cart_header{
@@ -160,6 +154,8 @@
     background-color:brown;
     color: #fff;
     padding: 1rem;
+    top: 0;
+    right: 0;
     /* position: initial; */
 }
 
@@ -169,7 +165,10 @@
     gap: 1.2rem;
     justify-content: space-around;
     align-items: center;
-    width: 70%;
+    /* width: 70%; */
+    width: 100%; /* Ajustado para ocupar todo el ancho del contenedor */
+    padding: 10px; /* Añadido para espacio interno */
+    border-bottom: 1px solid #ccc; /* Línea separadora entre productos */
 }
 
 .delete_item{
@@ -182,12 +181,14 @@
     padding-left: 20px;
 }
 
-.cart_total{
+.cart_total {
     font-size: 25px;
     padding: 20px;
     text-align: center;
-    padding-top: 20px;
     background-color: brown;
+    width: 100%; /* Ajustado para ocupar todo el ancho del contenedor */
+    position: sticky; /* Hacer que el total sea fijo en la parte inferior */
+    bottom: 0;
 }
 
 /* boton que muestra la cantidad de items en el carrito */

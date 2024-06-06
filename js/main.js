@@ -3,18 +3,30 @@
 <aside id="btn_carrito"></aside>*/}
 
 // Obtengo los elementos de HTML por su ID
+
 const container = document.getElementById("card_container");
 container.className = "c_container";
 const verCarrito = document.getElementById("ver_carrito");
 const carrito_contenedor = document.getElementById("carrito_contenedor");
 
-const cantCarrito = document.getElementById ("cantidadCarrito"); //contador items del carrito
+const cantCarrito = document.getElementById("cantidadCarrito"); //contador items del carrito
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let productos = []; //declaro el array de forma global
 
-// let carrito=[];
+//Funcion asincrona con fetch para obtener el json
+const getProducts = async () => {
+    const response = await fetch("data.json");
+    const data = await response.json();
 
-//___________FUNCIONES______________________________
+    productos = data; // Asigno data a los productos
+
+    // console.log(data);
+
+    //creo todas las cards por producto
+    data.forEach(el => crear_Card(el, container));
+}
+
 function agregar_Carrito(hamburguesa) {
     let agregar_burguer = productos.find(el => el.id === hamburguesa.id);
     let productoEnCarrito = carrito.find(el => el.id === agregar_burguer.id);
@@ -66,10 +78,10 @@ function crear_Card(Hamburguesa, contenedor) {
     contenedor.appendChild(card);
 }
 
+getProducts();
 
-//_____________GENERAL______________________
-
-productos.forEach(el => crear_Card(el, container)); //creo todas las cards por producto
+// productos.forEach(el => crear_Card(el, container)); 
+//creo todas las cards por producto
 
 const saveLocal= () =>{
     localStorage.setItem("carrito", JSON.stringify(carrito));
