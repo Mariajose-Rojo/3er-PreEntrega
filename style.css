@@ -12,7 +12,12 @@
 .header{
     width: 100%;
     display: flex;
+    flex-direction: column;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    /* position: fixed;  */
+    top: 0; /* Asegura que esté en la parte superior de la página */
+    z-index: 1000; /* Opcional, para asegurarse de que esté por encima de otros elementos */
+   
 
 }
 .header nav{
@@ -21,11 +26,24 @@
     gap: 1rem;
     justify-content: flex-end;
     width:100%;
+    background-color:#fff;
 }
 .header nav img{
     height: 25px;
 }
+/* carrousel */
+.header .d-item{
+    height: 300px;
+    width: 100vw;
+}
+.header .d-item{
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0.6);
+}
 
+
+/* ---------------------------------------------- */
 .body_index{
     background-color: rgba(184, 184, 184, 0.563);
     display: flex;

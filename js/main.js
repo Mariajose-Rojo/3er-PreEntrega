@@ -1,8 +1,5 @@
 
-
-
 // Obtengo los elementos de HTML por su ID
-
 const container = document.getElementById("card_container");
 container.className = "c_container";
 const verCarrito = document.getElementById("ver_carrito");
@@ -10,19 +7,32 @@ const carrito_contenedor = document.getElementById("carrito_contenedor");
 
 const cantCarrito = document.getElementById("cantidadCarrito"); //contador items del carrito
 
-
 // libreria Toastify
-function alertaToasty(){
-    Toastify({
-        text: "Producto agregado con exito!",
-        duration: 1000, 
-        gravity: "top", // `top` or `bottom`
-        position: "center", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-            background: "linear-gradient(to right, #910c26, #ed6e4e)",
-        },
-        }).showToast();
+function alertaToasty(bandera){
+    if (bandera){ //uso un flag para q cambie la notificacion
+        Toastify({
+            text: "Producto agregado con exito!",
+            duration: 1000, 
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(to right, #910c26, #ed6e4e)",
+            },
+            }).showToast();
+    } else{
+        Toastify({
+            // text: "Producto quitado con exito!",
+            text: "Se quitó el producto!",
+            duration: 1000, 
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(to right, #4d0813, #ed6e4e)",
+            },
+            }).showToast();
+    }
 }
 
 
@@ -83,7 +93,7 @@ function crear_Card(Hamburguesa, contenedor) {
     boton.innerText = "Agregar";
     boton.onclick = () => {
         agregar_Carrito(Hamburguesa);
-        alertaToasty();  //le agrego la notificacion de toastify
+        alertaToasty(true);  //le agrego la notificacion de toastify en true 
     }
 
     card.appendChild(titulo);
@@ -95,15 +105,53 @@ function crear_Card(Hamburguesa, contenedor) {
     contenedor.appendChild(card);
 }
 
+function mostrarProductos(productos) {
+    container.innerHTML = ''; // Limpiar el contenedor antes de mostrar los productos
+    productos.forEach(producto => crear_Card(producto, container));
+}
+
+function FiltrarProductos(categoria) {
+    const productosFiltrados = productos.filter(item => item.categoria === categoria);
+    mostrarProductos(productosFiltrados);
+}
+
+// FILTRAR POR CATEGORIA:
+const btn_carne = document.getElementById("btn-category-carne");
+const btn_veggie = document.getElementById("btn-category-veg");
+
+btn_carne.addEventListener("click", () => {
+    FiltrarProductos('carne'); //le paso la categoria a filtrar
+});
+
+btn_veggie.addEventListener("click", () => {
+    FiltrarProductos('vegetal');
+});
+
+
 getProducts();
 
-// productos.forEach(el => crear_Card(el, container)); 
-//creo todas las cards por producto
 
 const saveLocal= () =>{
     localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
+
+// function FiltrarProductos (categoria) {
+//     const productsToShow = productos.filter(item => item.categoria === categoria);
+//     crear_Card(productsToShow);
+// }
+
+// // FILTRAR POR CATEGORIA:
+// const btn_carne= document.getElementById("btn-category-carne");
+// const btn_veggie= document.getElementById("btn-category-veg");
+// // les pongo el evento que invoca a la funcion:
+// btn_carne.addEventListener("click", ()=>{
+//     FiltrarProductos('carne'); //le paso la categoria a filtrar
+// });
+
+// btn_veggie.addEventListener("click", ()=>{
+//     FiltrarProductos('vegetal');
+// })
 
 
 

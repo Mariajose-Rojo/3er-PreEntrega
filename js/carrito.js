@@ -39,10 +39,12 @@ const Armar_carrito = () => {
 
 
         //Comando botones de suma, resta y eliminar del carrito
+        let flag;// bandera q uso para modificar la alerta de toastify
         let sumar = carrito_content.querySelector(".sumar");
         sumar.addEventListener("click", () =>{
             producto.cantidad ++;
-            alertaToasty(); //le agrego la alerta de agregar producto
+            flag= true;
+            alertaToasty(flag); //le agrego la alerta de agregar producto
             saveLocal();
             Armar_carrito();
         })
@@ -50,6 +52,8 @@ const Armar_carrito = () => {
         let restar= carrito_content.querySelector(".restar"); 
         restar.addEventListener("click", ()=>{
             if(producto.cantidad !== 1){
+                flag= false;
+                alertaToasty(flag); //le agrego la alerta de quitar producto
                 producto.cantidad--;
             }
             saveLocal();
