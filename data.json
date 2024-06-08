@@ -1,31 +1,31 @@
 [
     {
         "id": 1,
-        "nombre": "Hamburguesa con queso",
-        "imagen": "https://i0.wp.com/www.sitemarca.com/wp-content/uploads/2020/11/McDonalds-PedidosYA-transp-e1604918016539.png",
-        "precio": 5500,
+        "nombre": "La Clásica Premium",
+        "imagen": "https://s3-eu-central-1.amazonaws.com/www.burgerking.com.ar.v2/wp-media-folder-burger-king-argentina//home/ubuntu/preview/menu-app/frontend/apps/marketing-website-wordpress-app/web/app/uploads/sites/5/Hamburguesa-con-Queso-1024x683.png",
+        "precio": 4500,
         "categoria": "carne",
-        "descripcion": "Una clásica y deliciosa hamburguesa con un jugoso medallón de carne, acompañada de una generosa porción de queso derretido que hará que cada bocado sea inolvidable."
+        "descripcion": "Clásica y deliciosa, con un jugoso medallón de carne, acompañada de una generosa porción de queso derretido que hará que cada bocado sea inolvidable."
         
     },
 
     {
         "id": 2,
-        "nombre": "Hamburguesa completa",
-        "precio": 4500,
+        "nombre": "La BBQ Suprema",
+        "precio": 5500,
         "categoria": "carne",
-        "imagen": "https://bk-latam-prod.s3.amazonaws.com/sites/burgerking.latam/files/BK_Web_HAMBURGER_500X540px.png",
-        "descripcion": "Una hamburguesa completa que satisface todos tus antojos: carne jugosa, queso, lechuga, tomate y cebolla, todo dentro de un pan suave y fresco. El equilibrio perfecto de sabores y texturas."
+        "imagen": "https://s3-eu-central-1.amazonaws.com/www.burgerking.com.ar.v2/wp-media-folder-bk-argentina//home/ubuntu/preview/menu-app/frontend/apps/marketing-website-wordpress-app/web/app/uploads/sites/5/BK_WB_CHEESEONIONDOBLE_1200X800_140922-1024x683.png",
+        "descripcion": "Jugosa carne de res, cebolla caramelizada, bacon crujiente, queso gouda y salsa BBQ ahumada en un pan de sésamo."
 
     },
 
     {
         "id": 3,
-        "nombre": "Hamburguesa con backon",
-        "precio": 7500,
+        "nombre": "La Bacon Lover",
+        "precio": 8500,
         "categoria": "carne",
-       "imagen": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kQX3BMhy/200/200/original?country=ar",
-        "descripcion": "Para los amantes del bacon, esta hamburguesa ofrece un medallón de carne jugosa con crujientes tiras de bacon y queso derretido, creando una explosión de sabores en cada mordida."
+       "imagen": "https://s3-eu-central-1.amazonaws.com/www.burgerking.com.ar.v2/wp-media-folder-burger-king-argentina//home/ubuntu/preview/menu-app/frontend/apps/marketing-website-wordpress-app/web/app/uploads/sites/5/Stacker-Cuadruple-1024x683.png",
+        "descripcion": "Exquisita carne de res, doble ración de bacon, queso cheddar, cebolla roja y una salsa especial de la casa en un pan de papa."
 
     },
 
@@ -34,88 +34,88 @@
         "nombre": "Especial del mes",
         "precio": 7000,
         "categoria": "carne",
-        "imagen": "https://bk-latam-prod.s3.amazonaws.com/sites/burgerking.latam/files/BK_Web_Big-King_500X540px.png",
-        "descripcion": "Una hamburguesa única y exclusiva que cambia cada mes, con ingredientes seleccionados cuidadosamente para brindarte una experiencia nueva y emocionante cada vez."
+        "imagen": "https://s3-eu-central-1.amazonaws.com/www.burgerking.com.ar.v2/wp-media-folder-bk-argentina/home/ubuntu/preview/menu-app/frontend/apps/marketing-website-wordpress-app/web/app/uploads/sites/5/Mozzarella-1024x1024.png",
+        "descripcion": "Hamburguesa única y exclusiva que cambia cada mes, con ingredientes seleccionados cuidadosamente para brindarte una experiencia nueva y emocionante cada vez."
 
     },
 
     {
         "id": 5,
-        "nombre": "Hamburguesa Griega",
+        "nombre": "La Suiza Deluxe",
         "precio": 8500,
         "categoria": "carne",
         "imagen": "https://mcdonalds.es/api/cms/images/mcdonalds-es/18f7ce51-4546-4c76-9ec2-7b12ad77e5a8_1080x943_Signature-Cabra-2021-doble.png?auto=compress,format",
-        "descripcion": "Para los amantes del bacon, esta hamburguesa ofrece un medallón de carne jugosa con crujientes tiras de bacon y queso derretido, creando una explosión de sabores en cada mordida."
+        "descripcion": "Tierna carne de res, queso suizo, champiñones salteados, rúcula y una suave salsa de mostaza y miel en un pan integral."
 
     },
 
     {
         "id": 6,
-        "nombre": "Hambuerguesa Extra-Ranch",
-        "precio": 8000,
+        "nombre": "La Guacamole Fest",
+        "precio": 8500,
         "categoria": "carne",
-        "imagen": "https://bk-latam-prod.s3.amazonaws.com/sites/burgerking.latam/files/BK_Web_doublecheesebaconXXL_500X540px.png",
-        "descripcion": "Una hamburguesa única y exclusiva que cambia cada mes, con ingredientes seleccionados cuidadosamente para brindarte una experiencia nueva y emocionante cada vez."
+        "imagen": "https://s3-eu-central-1.amazonaws.com/www.burgerking.com.ar.v2/wp-media-folder-bk-argentina//home/ubuntu/preview/menu-app/frontend/apps/marketing-website-wordpress-app/web/app/uploads/sites/5/BK_WEB_Whopper-Guacamole_1200X900_210922-1024x768.png",
+        "descripcion": "Jugosa carne de res, abundante guacamole fresco, queso cheddar derretido, lechuga crujiente, tomate y cebolla morada en un pan de brioche dorado."
 
     },
 
     {
         "id": 7,
-        "nombre": "La fan del pepinillo",
-        "imagen": "https://png.pngtree.com/png-clipart/20231011/original/pngtree-big-beef-cheese-burger-with-pickles-ai-generated-png-image_13294734.png",
+        "nombre": "La Napolitana Gourmet",
+        "imagen": "https://s3-eu-central-1.amazonaws.com/www.burgerking.com.ar.v2/wp-media-folder-burger-king-argentina//home/ubuntu/preview/menu-app/frontend/apps/marketing-website-wordpress-app/web/app/uploads/sites/5/DobleNapolitano-XL-1-1024x683.png",
         "precio": 7500,
         "categoria": "carne",
-        "descripcion": "Una clásica y deliciosa hamburguesa con un jugoso medallón de carne, acompañada de una generosa porción de queso derretido que hará que cada bocado sea inolvidable."
+        "descripcion": "Delicioso filete de res, jamón ahumado, tomate fresco, salsa blanca cremosa y queso mozzarella gratinado, servido en un pan ciabatta tostado."
         
     },
 
     {
         "id": 8,
-        "nombre": "Hamburguesa Desayuno",
+        "nombre": "La Veggie Deluxe",
         "precio": 7000,
         "categoria": "vegetal",
-        "imagen": "https://i.blogs.es/9ebe15/mcextreme-bourbon/1366_2000.png",
-        "descripcion": "Una hamburguesa completa que satisface todos tus antojos: carne jugosa, queso, lechuga, tomate y cebolla, todo dentro de un pan suave y fresco. El equilibrio perfecto de sabores y texturas."
+        "imagen": "https://s3-eu-central-1.amazonaws.com/www.burgerking.com.ar.v2/wp-media-folder-burger-king-argentina//home/ubuntu/preview/menu-app/frontend/apps/marketing-website-wordpress-app/web/app/uploads/sites/5/WhopperVegetal_2604-1024x1024.png",
+        "descripcion": "Hamburguesa de garbanzos y espinacas, queso vegano, tomate fresco, lechuga y una salsa de aguacate en un pan integral."
 
     }, 
 
     {
         "id": 9,
-        "nombre": "Hamburguesa Desayuno",
-        "precio": 7000,
+        "nombre": "La Portobello Especial",
+        "precio": 7200,
         "categoria": "vegetal",
-        "imagen": "https://i.blogs.es/9ebe15/mcextreme-bourbon/1366_2000.png",
-        "descripcion": "Una hamburguesa completa que satisface todos tus antojos: carne jugosa, queso, lechuga, tomate y cebolla, todo dentro de un pan suave y fresco. El equilibrio perfecto de sabores y texturas."
+        "imagen": "https://s3-eu-central-1.amazonaws.com/www.burgerking.com.ar.v2/wp-media-folder-burger-king-argentina//home/ubuntu/preview/menu-app/frontend/apps/marketing-website-wordpress-app/web/app/uploads/sites/5/Crispy-Chicken-1024x683.png",
+        "descripcion": "Suculenta seta portobello a la parrilla, queso de cabra, espinacas frescas, cebolla morada y una salsa balsámica en un pan de centeno."
 
     },
 
     {
         "id": 10,
-        "nombre": "Hamburguesa Desayuno",
-        "precio": 7000,
+        "nombre": "La Quinoa Power",
+        "precio": 6300,
         "categoria": "vegetal",
-        "imagen": "https://i.blogs.es/9ebe15/mcextreme-bourbon/1366_2000.png",
-        "descripcion": "Una hamburguesa completa que satisface todos tus antojos: carne jugosa, queso, lechuga, tomate y cebolla, todo dentro de un pan suave y fresco. El equilibrio perfecto de sabores y texturas."
+        "imagen": "https://s3-eu-central-1.amazonaws.com/www.burgerking.com.ar.v2/wp-media-folder-bk-argentina/home/ubuntu/preview/menu-app/frontend/apps/marketing-website-wordpress-app/web/app/uploads/sites/5/Foto-web-pollo_400x400-1.png",
+        "descripcion": "Hamburguesa de quinoa y remolacha, queso feta, rúcula, pepino y una salsa de yogur griego en un pan multigrano."
 
     },
 
     {
         "id": 11,
-        "nombre": "Hamburguesa Desayuno",
-        "precio": 7000,
+        "nombre": "César Clásica",
+        "precio": 5000,
         "categoria": "vegetal",
-        "imagen": "https://i.blogs.es/9ebe15/mcextreme-bourbon/1366_2000.png",
-        "descripcion": "Una hamburguesa completa que satisface todos tus antojos: carne jugosa, queso, lechuga, tomate y cebolla, todo dentro de un pan suave y fresco. El equilibrio perfecto de sabores y texturas."
+        "imagen": "https://s3-eu-central-1.amazonaws.com/www.burgerking.com.ar.v2/wp-media-folder-burger-king-argentina//home/ubuntu/wordpress/web/app/uploads/sites/5/2021/04/ensaladacaesar-1024x683.png",
+        "descripcion": "Crujientes hojas de lechuga romana, pechuga de pollo a la parrilla, crocantes croutones, queso parmesano rallado y nuestra cremosa salsa César casera."
 
     },
 
     {
         "id": 12,
-        "nombre": "Hamburguesa Desayuno",
-        "precio": 7000,
+        "nombre": "Atún Mediterránea",
+        "precio": 5000,
         "categoria": "vegetal",
-        "imagen": "https://i.blogs.es/9ebe15/mcextreme-bourbon/1366_2000.png",
-        "descripcion": "Una hamburguesa completa que satisface todos tus antojos: carne jugosa, queso, lechuga, tomate y cebolla, todo dentro de un pan suave y fresco. El equilibrio perfecto de sabores y texturas."
+        "imagen": "https://s3-eu-central-1.amazonaws.com/www.burgerking.com.ar.v2/wp-media-folder-burger-king-argentina//home/ubuntu/preview/menu-app/frontend/apps/marketing-website-wordpress-app/web/app/uploads/sites/5/BK1543_Final-1024x736.png",
+        "descripcion": "Atún fresco, mezclum de lechugas, aceitunas kalamata, tomate cherry, cebolla roja, pepino y un toque de alcaparras, todo aderezado con una vinagreta de limón y hierbas mediterráneas."
 
     }
 

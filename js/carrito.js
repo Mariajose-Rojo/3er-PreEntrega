@@ -31,7 +31,7 @@ const Armar_carrito = () => {
             <span class= "restar"> ➖ </span>
             <p>Cantidad: ${producto.cantidad}</p>
             <span class= "sumar"> ➕ </span>
-            <p>Precio: ${producto.precio} $</p>
+            <p>Precio: ${producto.precio * producto.cantidad} $</p>
             <span class= "delete_item"> ❌ </span>
         `;
         //si quiero q muestre el precio por cant de productos: producto.precio * producto.cantidad

@@ -21,14 +21,21 @@
     <header class="header">
         <!-- Barra de navegacion -->
         <nav>
-            <a href="./index.html"> <img src="" alt=""> </a>
-            <li><a href="#" id="btn-category-carne" class="btn_categoria">Categoria1</a></li>
-            <li><a href="#" id="btn-category-veg" class="btn_categoria">Categoria2</a></li>
-            <li><a id="ver_carrito" href="#"> <img src="./carrito.png" alt="carrito de compras"> <span id="cantidadCarrito" class="cant_cart">0</span> </a></li>
+
+            <a href="./index.html" class="logo-nav"> 
+                <!-- <img src="" alt="" > -->
+                <i class="fa-solid fa-burger"></i>
+                Burger Paradise
+            </a>
+            <ul class="nav-items">
+                <li><a href="#" id="btn-category-carne" class="btn_categoria">Todo Carne</a></li>
+                <li><a href="#" id="btn-category-veg" class="btn_categoria">Todo Vegetal</a></li>
+                <li><a id="ver_carrito" href="#"> <img src="./resources/carrito.png" alt="carrito de compras"> <span id="cantidadCarrito" class="cant_cart">0</span> </a></li>
+            </ul>
         </nav>
 
         <!-- Carrousel de fotos con bootstrap -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -39,7 +46,7 @@
 
               <div class="carousel-item active d-item">
                 <img src="./resources/slide-1.JPG" class="d-block w-100 d-img" alt="slide1">
-                <div class="carousel-caption top-0 mt4">
+                <div class="carousel-caption bot-0 mt-3">
                     <p class="mt-5 fs-3 text-uppercase">
                         Descubre nuevos sabores
                     </p>
@@ -49,7 +56,8 @@
 
               <div class="carousel-item active d-item">
                 <img src="./resources/slide-2.JPG" class="d-block w-100 d-img" alt="slide2">
-                <div class="carousel-caption top-0 mt4">
+                <div class="carousel-caption bot-0 mt4"> 
+                    <!-- bot-0 = bottom 0 / top-0 = parte superior -->
                     <p class="mt-5 fs-3 text-uppercase">
                         Descubre nuevos sabores
                     </p>
@@ -59,7 +67,7 @@
 
               <div class="carousel-item active d-item">
                 <img src="./resources/slide-3.JPG" class="d-block w-100 d-img" alt="slide3">
-                <div class="carousel-caption top-0 mt4">
+                <div class="carousel-caption bot-0 mt4">
                     <p class="mt-5 fs-3 text-uppercase">
                         Descubre nuevos sabores
                     </p>
@@ -95,23 +103,24 @@
         <div class="container">
             <div class="row">
                 <!-- Logo -->
-                 <a href="#" class="col-3 text-reset text-uppercase d-flex align-items-center">
-                    <img src="" alt="logo" class="img-logo mr-2">
-                    Hamburguesas
+                 <a href="#" class="col-3 text-reset text-uppercase d-flex align-items-center custom-link-logo">
+                    <!-- <img src="" alt="logo" class="img-logo mr-2"> -->
+                    <i class="fa-solid fa-burger"></i>
+                    Burger Paradise
                  </a>
                 <!-- Menu 1 -->
                  <ul class="col-3 list-unstyled mt-3">
                     <li class="font-weight-bold text-uppercase">Contacto</li>
-                    <li><a href="#" class="text-reset">Link 1</a></li>
-                    <li><a href="#" class="text-reset">Link 2</a></li>
-                    <li><a href="#" class="text-reset">Link 3</a></li>
+                    <li><a href="#" class="text-reset custom-link">Horario de atencion</a></li>
+                    <li><a href="#" class="text-reset custom-link">Servicios</a></li>
+                    <li><a href="#" class="text-reset custom-link">Politica de privacidad</a></li>
                  </ul>
                 <!-- Menu 2 -->
                 <ul class="col-3 list-unstyled mt-3">
-                    <li class="font-weight-bold text-uppercase">Hacete socio</li>
-                    <li><a href="#" class="text-reset">Link 1</a></li>
-                    <li><a href="#" class="text-reset">Link 2</a></li>
-                    <li><a href="#" class="text-reset">Link 3</a></li>
+                    <li class="font-weight-bold text-uppercase">Ayuda</li>
+                    <li><a href="#" class="text-reset custom-link">Preguntas</a></li>
+                    <li><a href="#" class="text-reset custom-link">Estatus de orden</a></li>
+                    <li><a href="#" class="text-reset custom-link">Pagos</a></li>
                  </ul>
                 <!-- Redes sociales -->
                 <ul class="col-3 list-unstyled mt-3">
@@ -121,7 +130,6 @@
                         <a href="#" class="text-reset"><i class="fa-brands fa-x-twitter"></i></a>
                         <a href="#" class="text-reset"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#" class="text-reset"><i class="fa-brands fa-whatsapp"></i></a>
-                        
                     </li>
                     
                  </ul>
