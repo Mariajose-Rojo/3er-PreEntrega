@@ -94,10 +94,43 @@
 .body_index{
     background-color: #3d2a24;
     display: flex;
+    flex-direction: column;
     justify-items: center;
     align-items: center;
 
 }
+
+.body_index .intro_main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    align-items: center;
+}
+
+.body_index .intro_main h1{
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    background-color: brown;
+    padding: 30px;
+    border-radius: 50%;
+}
+
+.body_index .intro_main p{
+    font-size: 18px;
+    font-weight: 600;
+    color: #241818;
+    width: 90%;
+    background-color: #f0f0d8;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
 .c_container { 
     justify-content: center;
     /* align-items: flex-end; */
@@ -166,7 +199,7 @@
     text-align: center;
     line-height: 1.5;
     color: #121111;
-    size: 15px;
+    size: 16px;
     padding: 1rem 0.2rem;
 }
 
